@@ -1,3 +1,12 @@
+Dockerfile:
+FROM adoptopenjdk:11-jre-openj9
+RUN mkdir /opt/app
+COPY japp.jar /opt/app
+CMD ["java", "-jar", "/opt/app/japp.jar"]
+
+
+
+Errormessage:
 $ sudo docker build -t japp .
 ERRO[0002] Can't add file /home/jennbull/.dropbox/command_socket to tar: archive/tar: sockets not supported 
 ERRO[0002] Can't add file /home/jennbull/.dropbox/iface_socket to tar: archive/tar: sockets not supported 
