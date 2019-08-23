@@ -1,0 +1,22 @@
+$ sudo docker build -t japp .
+ERRO[0002] Can't add file /home/jennbull/.dropbox/command_socket to tar: archive/tar: sockets not supported 
+ERRO[0002] Can't add file /home/jennbull/.dropbox/iface_socket to tar: archive/tar: sockets not supported 
+Sending build context to Docker daemon  1.686GB
+Step 1/4 : FROM adoptopenjdk:11-jre-openj9
+11-jre-openj9: Pulling from library/adoptopenjdk
+35c102085707: Already exists 
+251f5509d51d: Already exists 
+8e829fe70a46: Already exists 
+6001e1789921: Already exists 
+4dfc4d19ec09: Already exists 
+02dd5348d9e1: Pull complete 
+Digest: sha256:20dae2203db2d82e2928e1cab8526f6635e5a27a5e007dc83a4e95fd5ddf7460
+Status: Downloaded newer image for adoptopenjdk:11-jre-openj9
+ ---> 13f15611ff56
+Step 2/4 : RUN mkdir /opt/app
+ ---> Running in b14240215886
+Removing intermediate container b14240215886
+ ---> a65bc33079e2
+Step 3/4 : COPY japp.jar /opt/app
+COPY failed: stat /var/lib/docker/tmp/docker-builder137464285/japp.jar: no such file or directory
+
